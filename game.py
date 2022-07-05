@@ -4,7 +4,9 @@ from AI import Ai
 class Game:
 
     def __init__(self):
-     self.human = Human()
+     self.human = Human("user1")
+     self.human.choosing()
+     self.human_choice = self.human.chosen_gesture
      self.computer = Ai()
 
     def greeting(self):
