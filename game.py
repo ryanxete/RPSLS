@@ -5,9 +5,12 @@ class Game:
 
     def __init__(self):
      self.human = Human("user1")
-     self.human.choosing()
-     self.human_choice = self.human.chosen_gesture
-     self.computer = Ai()
+     self.computer = Ai("Computer")
 
+    def run_game(self):
+        self.greeting()
+        self.human.choosing()
+        
     def greeting(self):
         print("welcome to the game")
+
