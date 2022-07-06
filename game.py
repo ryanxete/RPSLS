@@ -11,10 +11,7 @@ class Game:
     def run_game(self):
         self.greeting()
         self.game_mode()
-        
-    
-       
-            
+              
     def game_mode(self):
         answer = input("Would you like to play Solo(press 1) or Multiplayer(press 2)?")
         if answer == "1":
@@ -23,23 +20,23 @@ class Game:
             self.human_vs_human()
 
     def human_vs_Ai(self):
-        print("1asfa")
+        while self.human.count < 2 and self.computer.count < 2:
+            self.human.choosing()
+            self.computer.choosing()
+            self.comparing_gestures(self.human.chosen_gesture, self.computer.chosen_gesture)
 
 
     def human_vs_human(self):
-        self.human.choosing()
-        self.human2.choosing()
+        while self.human.count < 2 and self.human2.count < 2:
+            self.human.choosing()
+            self.human2.choosing()
+            self.comparing_gestures(self.human.chosen_gesture, self.human2.chosen_gesture)
         
-
-
-    def comparing_gestures(self):
-
-        self.human.choosing()
-        if self.human.chosen_gesture == '1':
-            print(self.human.chosen_gesture)
+    def comparing_gestures(self, answer1, answer2):
+        if answer1 == "1":
+            print("dsdsd")
+            
         
-
-    ##AI or Human
     def greeting(self):
         print("welcome to the game")
 
