@@ -27,22 +27,22 @@ class Game:
                 print("please enter a valid number!")
 
     def human_vs_Ai(self):
-        while self.human.count < 2 and self.computer.count < 2:
+        while self.human.count < 3 and self.computer.count < 3:
             self.human.choosing()
             self.computer.choosing()
             print(f"Computer chose {self.computer.chosen_gesture} and you chose {self.human.chosen_gesture}")
             self.comparing_gestures(self.human.chosen_gesture, self.computer.chosen_gesture)
-        if self.human.count == 2:
+        if self.human.count == 3:
             print("You won!!")
         else:
             print("Computer won!!")
 
     def human_vs_human(self):
-        while self.human.count < 2 and self.human2.count < 2:
+        while self.human.count < 3 and self.human2.count < 3:
             self.human.choosing()
             self.human2.choosing()
             self.comparing_gestures(self.human.chosen_gesture, self.human2.chosen_gesture)
-        if self.human.count == 2:
+        if self.human.count == 3:
             print("User1 won!!")
         else:
             print("User2 won!!")
