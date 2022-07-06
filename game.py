@@ -23,18 +23,22 @@ class Game:
         while self.human.count < 2 and self.computer.count < 2:
             self.human.choosing()
             self.computer.choosing()
+            print(self.computer.chosen_gesture)
             self.comparing_gestures(self.human.chosen_gesture, self.computer.chosen_gesture)
 
 
     def human_vs_human(self):
+
         while self.human.count < 2 and self.human2.count < 2:
             self.human.choosing()
             self.human2.choosing()
             self.comparing_gestures(self.human.chosen_gesture, self.human2.chosen_gesture)
         
     def comparing_gestures(self, answer1, answer2):
-        if answer1 == "1":
-            print("dsdsd")
+        if answer1 == "rock" and answer2 == "paper":
+             self.human2.count += 1 
+             self.computer.count += 1
+            
             
         
     def greeting(self):
