@@ -7,4 +7,4 @@ class Ai(Player):
         
     
     def choosing(self):
-        self.chosen_gesture = random.randint()##where we left off!
+        self.chosen_gesture = random.choice(self.gesture_list)##where we left off!
